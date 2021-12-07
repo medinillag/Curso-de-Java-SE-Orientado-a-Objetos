@@ -1,3 +1,5 @@
+import java.util.Date;
+
 import static ui.UIMenu.*;
 
 public class Main {
@@ -6,31 +8,21 @@ public class Main {
         //showMenu();
 
         Doctor myDoctor = new Doctor("Anahí Salgado", "Pediatra");
-        System.out.println(myDoctor.name);
-        System.out.println(myDoctor.speciality);
+        myDoctor.addAvailableAppointment(new Date(), "4PM");
+        myDoctor.addAvailableAppointment(new Date(), "10PM");
+        myDoctor.addAvailableAppointment(new Date(), "13PM");
+
+        for (Doctor.AvailableAppointment aA :
+                myDoctor.getAvailableAppointments()) {
+            System.out.println(aA.getDate() + " " + aA.getTime());
+        }
 
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
-        Patient patient2 = new Patient("Anahí", "anahí@mail.com");
-        System.out.println(patient.getName());
-        System.out.println(patient.getEmail());
-
         patient.setWeight(60.5);
         patient.setHeight(1.65);
 
-        System.out.println(patient.getWeight());
-        System.out.println(patient.getHeight());
+        Patient patient2 = new Patient("Anahí", "anahí@mail.com");
 
-        int i = 0;
-        int b = 2;
-        b = i;
 
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
-        patient2.setName("Manuel");
-
-        System.out.println(patient.getName());
-        System.out.println(patient2.getName());
     }
 }
