@@ -1,4 +1,5 @@
 public class Patient {
+    private int id = 0;
     private String name;
     private String email;
     private String address;

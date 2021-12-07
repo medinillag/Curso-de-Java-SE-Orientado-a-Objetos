@@ -3,6 +3,7 @@ public class Doctor {
     static int id = 0; //Autoincrement
     String name;
     String speciality;
+    private String email;
 
     Doctor() {
         System.out.println("Construyendo el objeto doctor");
