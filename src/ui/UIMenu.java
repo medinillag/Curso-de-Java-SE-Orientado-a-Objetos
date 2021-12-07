@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class UIMenu {
 
+    public static String[] MONTHS = {"Enero", "Febrero", "Marzo",
+    "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre",
+    "Octubre", "Noviembre", "Diciembre"};
+
     public static void showMenu() {
         System.out.println("Welcome to My Appointments");
         System.out.println("Selecciona la opción deseada");
@@ -53,6 +58,9 @@ public class UIMenu {
                     break;
                 case 2:
                     System.out.println("My appointments");
+                    for (int i = 0; i < 3; i++) {
+                        System.out.println(i + "." + MONTHS[i]);
+                    }
                     break;
                 case 0:
                     System.out.println("back to main menu");
