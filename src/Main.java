@@ -7,7 +7,7 @@ public class Main {
 
         //showMenu();
 
-        Doctor myDoctor = new Doctor("Anahí Salgado", "Pediatra");
+        Doctor myDoctor = new Doctor("Anahí Salgado", "anahi@anahi.com");
         myDoctor.addAvailableAppointment(new Date(), "4PM");
         myDoctor.addAvailableAppointment(new Date(), "10PM");
         myDoctor.addAvailableAppointment(new Date(), "13PM");
