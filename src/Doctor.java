@@ -1,48 +1,13 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    //Atributos
-    static int id = 0; //Autoincrement
-    private String name;
+public class Doctor extends User {
     private String speciality;
-    private String email;
 
-    Doctor() {
-        System.out.println("Construyendo el objeto doctor");
-        id++;
-    }
-
-    Doctor(String name, String speciality) {
-        id++;
+    Doctor(String name, String email) {
+        super(name, email);
         System.out.println("El nombre del doctor asignado es: " + name);
-        this.name = name;
         this.speciality = speciality;
-    }
-
-    //Comportamientos
-    public void showName() {
-        System.out.println(name);
-    }
-
-    public void showId() {
-        System.out.println("ID Doctor: " + id);
-    }
-
-    public static int getId() {
-        return id;
-    }
-
-    public static void setId(int id) {
-        Doctor.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getSpeciality() {
@@ -51,14 +16,6 @@ public class Doctor {
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
