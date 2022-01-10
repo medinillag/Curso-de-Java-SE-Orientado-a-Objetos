@@ -23,6 +23,8 @@ public class Main {
 
         Patient patient2 = new Patient("Anahí", "anahí@mail.com");
 
+        System.out.println(patient2);
+        System.out.println(myDoctor);
 
     }
 }

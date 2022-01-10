@@ -17,16 +17,16 @@ public class Patient extends User {
         this.birthday = birthday;
     }
 
-    public double getWeight() {
-        return weight;
+    public String getWeight() {
+        return weight + " Kg.";
     }
 
     public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public double getHeight() {
-        return height;
+    public String getHeight() {
+        return height + " m.";
     }
 
     public void setHeight(double height) {
@@ -39,5 +39,14 @@ public class Patient extends User {
 
     public void setBlood(String blood) {
         this.blood = blood;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + "\nAge: " + birthday
+                + "\nWeight: " + getWeight()
+                + "\nHeight: " + getHeight()
+                + "\nBlood: " + blood;
     }
 }
