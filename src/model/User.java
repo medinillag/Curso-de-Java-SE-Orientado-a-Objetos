@@ -1,3 +1,5 @@
+package model;
+
 public class User {
     private int id;
     private String name;
@@ -6,7 +8,7 @@ public class User {
     private String phoneNumber;
 
     /**
-     * Constructor de la clase User
+     * Constructor de la clase model.User
      * @param name nombre del usuario
      * @param email correo del usuario
      */
@@ -65,7 +67,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User: " + name + ", Email: " + email
+        return "model.User: " + name + ", Email: " + email
                 + "\nAddress: " + address + ", Phone: " + phoneNumber;
     }
 }
